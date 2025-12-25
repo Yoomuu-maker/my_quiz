@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Simple Quiz</h1>
+<p>What is 5 + 3?</p>
+
+<button onclick="checkAnswer(6)">6</button>
+<button onclick="checkAnswer(8)">8</button>
+<button onclick="checkAnswer(10)">10</button>
+
+<div id="result"></div>
+
+<script>
+function checkAnswer(answer) {
+    const result = document.getElementById("result");
+    if(answer === 8) {
+        result.textContent = "Correct! 🎉";
+        result.style.color = "green";
+    } else {
+        result.textContent = "Wrong! ❌ Try again.";
+        result.style.color = "red";
+    }
+}
+</script>
+
+</body>
+</html>
